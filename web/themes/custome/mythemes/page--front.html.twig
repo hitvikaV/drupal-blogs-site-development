@@ -1,0 +1,45 @@
+<header role="banner">
+	<div class="main-header">
+		{{page.header}}
+		<div class="main-nav">
+			<span>Menu</span>
+			{{page.main_navigation}}
+		</div>
+	</div>
+</header>
+
+
+<div class="layout-container">
+
+	<main role="main">
+		{# <a id="main-content" tabindex="-1"></a> #}
+		{# link is in html.html.twig #}
+
+			<div class="layout-content"> {% if page.main_content_body %}
+				
+
+				<section class="my-slider slider">
+					<div>
+						<img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png">
+					</div>
+					<div>
+						<img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png">
+					</div>
+					<div>
+						<img src="https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png">
+					</div>
+				</section>
+
+				{{page.main_content_body}}
+			{% endif %}
+
+		</div>
+		{# /.layout-content #}
+	</main>
+	{% if page.footer %}
+		<footer role="contentinfo">
+			{{ page.footer }}
+		</footer>
+	{% endif %}
+</div>
+{# /.layout-container #}

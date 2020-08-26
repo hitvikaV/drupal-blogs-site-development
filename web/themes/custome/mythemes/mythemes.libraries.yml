@@ -2,9 +2,16 @@ global-css:
   css:
     theme:
       css/style.css: {}
-    header: true
+      //use.fontawesome.com/releases/v5.3.1/css/all.css: { type: external, minified: true }
+      //stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css: { type: external}
+      //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css: { type: external }
+fonts:
+  css:
+    theme:
+      //fonts.googleapis.com/css2?family=Open+Sans&display=swap: {type: external}
 global-js:
   js:
     js/main.js: {}
+    //cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.js: { type: external}
   dependencies:
     - core/jquery
