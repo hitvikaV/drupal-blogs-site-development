@@ -1,7 +1,6 @@
 .main-header{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
-    text-align: center;
     padding-top: 2%;
     h1{
         font-size: 48px;
@@ -15,10 +14,12 @@
     font-size: 48px;
     color: black;
     display: block;
+    text-align: center;
 }
 .site-slogan{
     font-size: 18px;
     font-weight: 400;
+    text-align: center;
 }
 .main-nav{
     width: 100%;
@@ -28,6 +29,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 80px;
+    position: relative;
     span{
         font-size: 20px;
         margin-left: 80%;
@@ -38,6 +40,7 @@
         
         li{
             float: none;
+            z-index: 4;
             a{
                 text-decoration: none;
                 color: black;
@@ -51,6 +54,7 @@
         float: right;
         position: relative;
         width: 200px;
+        background-color: white;
     }
     a{
         display: block;
@@ -58,6 +62,7 @@
         margin-bottom: 18px;
         text-decoration: none;
         color: black;
+        margin-left: 75px;
     }
     // a:before { color: inherit; content: "\f1eb"; display: inline-block; float: none; font-family: "Font Awesome 5 Free"; font-size: inherit; font-weight: 300; margin: 0 6px 0 0; padding: 0; }
 }

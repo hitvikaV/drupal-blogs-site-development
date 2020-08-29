@@ -11,9 +11,17 @@ jQuery(document).ready(function($) {
       autoplaySpeed: 2000,
       infinite: true
     });
-    $button.removeAttr('aria-label');
 
     $(".test").find("a").addClass('fa fa-bars')
+
+
+    // $(".slick-prev").click(function(){
+    //   $(".slick-prev").addClass("border-none")
+    //   console.log("hello")
+    // })
+
+
+   
     // $(function() {
 
     //   var inWrap = $('.inner-wrapper'),

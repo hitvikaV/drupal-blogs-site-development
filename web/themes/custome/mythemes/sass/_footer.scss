@@ -1,278 +1,43 @@
-.footer{
-    width: 80%;
-    height: 1000px;
-    margin-left: 130px;
-    padding-top: 100px;
-    .footer-para{
+footer{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    margin-top: 150px;
+    border-top: 1px solid #d6d4d4;
+    border-bottom: 1px solid #d6d4d4;
+    background-color: black;
+    ul{
+        // color: pink;
+        color: #FC9B01;
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
         font-size: 18px;
-        margin-left: 40%;
-        span{
-            color: #109AF5;
-            font-size: 15px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        border-bottom: 1px solid #d6d4d4;
+        
+        li ul{
+            display: block;
+            width: 300px;
+            margin-top: 10px;
+            font-weight: normal;
+            border: none;
+            
         }
-    }
-    .logo{
-        width: 100%;
-        height: 40%;
-        margin-top: 2%;
-        border-top: 1px solid #9F9F9F;
-        border-bottom: 1px solid #9F9F9F;
-        padding: 3%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    .line-one{
-        width: 100%;
-        height: 30%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        .logo-one{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo1.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-two{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo2.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-three{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo3.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-four{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo4.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-five{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo5.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-six{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo6.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-seven{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo7.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-eight{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo8.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-nine{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo9.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-ten{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo10.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-eleven{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo11.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-tweleve{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo12.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-thirteen{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo13.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-fourteen{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo14.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-fifteen{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo15.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-sixteen{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo16.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-seventeen{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo17.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-eightteen{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo18.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-ninteen{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo19.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-twenty{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo20.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-twentyone{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo21.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-twentytwo{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo22.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-twentythree{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo23.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-        .logo-twentyfour{
-            width: 10%;
-            height: 100%;
-            background: url('../images/logo24.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    }
-    .info{
-        width: 100%;
-        height: 50%;
-        margin-top: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        .gen-info-content{
-            width: 100%;
-            height: 70%;
-            padding-top: 5%;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-size: 18px;
-            line-height: 25px;
-        }
-        .gen-info{
-            width: 35%;
-            height: 100%;
-        }
-        .gen-info-logo{
-            width: 100%;
-            height: 30%;
-            background: url('../images/logo-img.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: top;
-        }
-        .useful-links{
-            width: 25%;
-            height: 100%;
-            padding-left: 5%;
-        }
-        .useful-links-heading{
-            font-size: 30px;
-            font-weight: 600;
-        }
-        a{
-            text-decoration: none;
-            color: #109AF5;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        .editor{
-            width: 45%;
-            height: 100%;
-            padding-left: 5%;
-            .email{
-                width: 100%;
-                height: 23%;
-                margin-bottom: 7%;
-                border-bottom: 1px solid #9F9F9F;
+        .sub-menu{
+            li{
+                margin-bottom: 10px;
+                font-size: 15px;
+                color: white;
             }
         }
+    }
+    .icons{
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #FC9B01;
+        text-align: center;
+        line-height: 30px;
+        color: white;
     }
 }

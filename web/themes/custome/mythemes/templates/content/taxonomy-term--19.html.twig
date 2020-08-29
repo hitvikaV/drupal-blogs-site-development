@@ -1,0 +1,189 @@
+{% set a = -6 %}
+abs example <br>
+{{ a|abs }}
+
+<br><br>
+break example <br>
+{% set items = ['a', 'b', 'c', 'd'] %}
+
+<table>
+{% for row in items|batch(3, 'batch') %}
+    <tr>
+        {% for column in row %}
+            <td>{{ column }}</td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+
+<br><br>
+capitalize example
+{{ 'capitalize example'|capitalize }}
+
+<br><br>
+column exaple <br>
+{% set items = [{ 'fruit' : 'apple'}, {'fruit' : 'orange' }] %}
+
+{% set fruits = items|column('fruit') %}
+<br><br>
+
+convert_encoding example <br>
+{% set data = 'convert_encoding example' %}
+{{ data|convert_encoding('UTF-8', 'iso-2022-jp') }}
+
+{# <br><br>
+country name example <br>
+{{ 'FR'|country_name }} #}
+{# {{ 'FR'|country_name }} #}
+{# {{ 'EUR'|currency_symbol }} #}
+{# {{ 'de'|language_name }} #}
+{# {{ 'de'|locale_name }} #}
+{# The format_currency filter formats a number as a currency: #}
+{# <p>{{ '1000000'|format_currency('EUR') }}</p> #}
+{# need to install intl-extra #}
+
+{# generates a URL using the data scheme as defined in RFC 2397 #}
+{# {{ '<b>foobar</b>'|data_uri(mime="text/html") }} #}
+{# <p>{{ '2019-08-07 23:39:12'|format_datetime() }}</p> #}
+{# need to install html-extra #}
+
+{# filter formate a date #}
+<p>{{ "now"|date("m/d/Y") }}</p>
+<br>
+
+<p>{{ "now"|date_modify("+1 day")|date("m/d/Y") }}</p>
+<br>
+{# The default filter returns the passed default value if the value is undefined or empty #}
+<p>
+
+{{ var|default('var is not defined') }}
+</p>
+
+{# The filter filter filters elements of a sequence or a mapping using an arrow function #}
+{% set sizes = [34, 36, 38, 40, 42] %}
+<p>
+{{ sizes|filter(v => v > 38)|join(', ') }}
+</p>
+
+{# The first filter returns the first “element” of a sequence, a mapping, or a string #}
+<p>{{ '1234'|first }}</p>
+
+{# The format filter formats a given string by replacing the placeholders  #}
+{% set lays = "lays" %}
+<p>{{ "I like %s and %s."|format(lays, "kurkure") }}</p>
+
+{# The format_number filter formats a number: #}
+{# <p>{{ '1000000'|format_number({fraction_digit: 4}) }}</p> #}
+
+
+{# {% apply html_to_markdown %}
+    <html>
+        <h1>Hello!</h1>
+    </html>
+{% endapply %} #}
+{# {% apply markdown_to_html %}
+Title
+======
+
+Hello!
+{% endapply %} #}
+{# need to install extra-bundle #}
+
+
+{# {% apply inline_css %}
+    <html>
+        <head>
+            <style>
+                p { color: red; }
+            </style>
+        </head>
+        <body>
+            <p>Hello CSS!</p>
+        </body>
+    </html>
+{% endapply %}
+need to install cssinliner-extra #}
+
+{# {% apply inky_to_html %}
+    <row>
+        <columns large="6"></columns>
+        <columns large="6"></columns>
+    </row>
+{% endapply %}
+need to install inky-extra #}
+
+{# used for concat #}
+<p>{{ [1, 2, 3]|join(', ', ' and ') }}</p>
+
+{% set jsondata = {key: 1, name: 'hitvika', age: 21, lastname: 'verma'} %}
+<p>{{ jsondata|json_encode() }}</p>
+
+{# The keys filter returns the keys of an array #}
+{% for key in jsondata|keys %}
+    <p>{{key}}</p>
+{% endfor %}
+
+{# The last filter returns the last “element” of a sequence, a mapping, or a string #}
+ <br><br><br>
+{{ [1, 2, 3, 4]|last }}
+
+<p>{{jsondata|length}}</p>
+
+
+{% set exmap = [
+    {first: "hitvika", last: "verma"},
+    {first: "aman", last: "verma"},
+] %}
+
+<p>{{ people|map(p => "#{p.first} #{p.last}")|join(', ') }}</p>
+
+
+
+{% set fruits = { 'apple': 'fruit', 'orange': 'fruit', 'peugeot': 'unknown' } %}
+
+{% set fruits = items|merge({ 'peugeot': 'car', 'renault': 'car' }) %}
+<p>{{ fruits }}</p> 
+
+
+{# The nl2br filter inserts HTML line breaks before all newlines in a string: #}
+{# {# <p>{{ "I like Twig.\nYou will like it too."|nl2br }}</p> #}
+
+<p>{{ 9800.333|number_format(2, '.', ',') }}</p>
+
+
+{% set numbersReduce = [1, 2, 3] %}
+
+<p>{{ numbersReduce|reduce((carry, v) => carry + v) }}</p> 
+
+{# The replace filter formats a given string by replacing the placeholders  #}
+{# {# {% set tea = 'tea' %} #}
+<p>{{ "I like %this% and %that%."|replace({'%this%': tea, '%that%': "coffee"}) }}</p> 
+
+<p>{{ '1234'|reverse }}</p>
+
+<p>{{ 42.55|round(1, 'floor') }}</p>
+
+{{ '12345'|slice(1, 2) }}
+
+
+{% set fruit = [
+    { name: 'Apples', quantity: 5 },
+    { name: 'Oranges', quantity: 2 },
+    { name: 'Grapes', quantity: 4 },
+] %}
+
+{% for fruit in fruit|sort((a, b) => a.quantity <=> b.quantity)|column('name') %}
+    {{ fruit }}
+{% endfor %}
+
+
+{% set numb = "one,two,three"|split(',') %}
+
+
+{{ 'my title'|title }}
+
+
+{{ '  I like coffee.'|trim('.') }}
+
+
+{{ 'welcome'|upper }}
