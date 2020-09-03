@@ -12,6 +12,12 @@ jQuery(document).ready(function($) {
       infinite: true
     });
 
+    if($(window).width() < 680){
+      $('.u').removeClass('pl-3');
+      $('.slide-mobile').removeClass('pr-5');
+      $('.slide-mobile').addClass('pr-3');
+    }
+
     $(".test").find("a").addClass('fa fa-bars')
 
 
